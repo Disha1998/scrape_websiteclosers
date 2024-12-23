@@ -19,4 +19,3 @@ def get_listings():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-    scrape_website()
