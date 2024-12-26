@@ -1,5 +1,5 @@
 from app.database import get_db_connection
-from scraper.scrape_websiteclosers import scrape_website
+from scraper.scrape_details import scrape_details
 
 def main():
     # Get the database connection
@@ -7,8 +7,8 @@ def main():
     cursor = conn.cursor()
 
     try:
-        # Call the scraping function
-        scrape_website(cursor, conn)
+        # Call the detail page scraping function
+        scrape_details(cursor, conn)
     finally:
         # Close the connection
         cursor.close()

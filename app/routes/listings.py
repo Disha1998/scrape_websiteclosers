@@ -7,20 +7,6 @@ from scraper.scrape_websiteclosers import scrape_website
 router = APIRouter()
 
 
-# @router.post("/scrape")
-# def start_scraping():
-#     try:
-#         conn = get_db_connection()
-#         cursor = conn.cursor()
-#         scrape_website(cursor, conn)
-#         cursor.close()
-#         conn.close()
-#         return {"message": "Scraping completed successfully!"}
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
-
-
-
 @router.get("/listings")
 def get_listings():
     try:
